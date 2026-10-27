@@ -1,0 +1,8 @@
+wine:
+  file: music/wine
+  category: music
+  subtitle: "Wine"
+  volume: 1.0
+  pitch: 1.0
+  stream: true
+  length: 38.545

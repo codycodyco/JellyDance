@@ -1,0 +1,30 @@
+# Wine — authored by the server owner, preserved as the bundled example.
+# duration is in seconds; event time is absolute seconds from dance start.
+# A behaviour loops until cancelled (or the dance ends).
+name: Wine
+duration: 38.5
+phase: sync
+
+players: true
+player-emote: "jellydance_wine"
+
+music:
+  sound: "jellydance:wine"
+  volume: 1.0
+  pitch: 1.0
+  start-delay: 0.0
+  stop-on-end: true
+  loop: false
+  radius: 32.0
+  length: 38.545
+
+events:
+  # Spin starts at 9s, stops at 23s, then spins faster.
+  - { time: 9,  type: rotate, yaw-speed: 360 }
+  # Player-view shake follows the timeline; frequency is the value you chose.
+  - { time: 9,  type: screen-shake, enabled: true, amplitude: 0.03, frequency: 2.0, radius: 16.0 }
+  - { time: 0,  type: scale, amount: 0.05, frequency: 2.2, mode: squash }
+  - { time: 0,  type: translate, y: 0.1, frequency: 1.1 }
+  - { time: 23, type: cancel, target: rotate }
+  - { time: 23, type: screen-shake, enabled: false }
+  - { time: 23, type: rotate, yaw-speed: 720 }

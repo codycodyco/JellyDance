@@ -1,0 +1,27 @@
+# RP Engine player emote for the Wine dance.
+# root rotates/scales the whole player figure; the rig uses each player's own skin.
+jellydance_wine:
+  name: Wine
+  length: 38.5
+  loop: false
+  root:
+    rotation:
+      - { time: 0,    value: [0, 0, 0] }
+      - { time: 9,    value: [0, 0, 0] }
+      - { time: 23,   value: [0, 5040, 0], interpolation: linear }
+      - { time: 38.5, value: [0, 16200, 0], interpolation: linear }
+    scale:
+      - { time: 0,    value: [1, 1, 1] }
+      - { time: 9,    value: [1, 1, 1] }
+      - { time: 9.25, value: [1.03, 0.95, 1.03], interpolation: smooth }
+      - { time: 9.5,  value: [1, 1, 1], interpolation: smooth }
+      - { time: 10,   value: [1.03, 0.95, 1.03], interpolation: smooth }
+      - { time: 10.5, value: [1, 1, 1], interpolation: smooth }
+  animators:
+    rightArm:
+      rotation:
+        - { time: 0,    value: [0, 0, 0] }
+        - { time: 9,    value: [0, 0, 0] }
+        - { time: 9.5,  value: [-20, 0, 15], interpolation: smooth }
+        - { time: 23,   value: [0, 0, 0], interpolation: smooth }
+        - { time: 38.5, value: [-20, 0, 15], interpolation: smooth }

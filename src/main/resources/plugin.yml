@@ -1,0 +1,21 @@
+name: JellyDance
+version: '${version}'
+main: dev.cody.jellydance.JellyDancePlugin
+api-version: '26.2'
+description: Dances vanilla mobs with their static vanillamobs models.
+author: DSH
+depend: [VanillaModelLibrary]
+softdepend: [RPEngine]
+commands:
+  jellydance:
+    description: Start or stop a dance for nearby vanilla mobs.
+    usage: /<command> <start [radius] [dance]|startat <player|x y z> [radius] [dance]|list|reload|stop|status>
+    aliases: [dance]
+    permission: jellydance.use
+permissions:
+  jellydance.use:
+    description: Start a dance for nearby mobs.
+    default: true
+  jellydance.admin:
+    description: Stop every dance and inspect sessions.
+    default: op

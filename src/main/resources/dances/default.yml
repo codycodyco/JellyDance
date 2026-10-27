@@ -1,0 +1,12 @@
+# Authored dance used when no dance name is given.
+# duration is in seconds. Every event time is absolute seconds from dance start.
+# Rotation keeps accumulating until cancelled; scale/translate oscillate until
+# cancelled. All behaviours stop when the dance reaches duration.
+name: Default
+duration: 10
+phase: random
+
+events:
+  - { time: 0, type: rotate, yaw-speed: 72 }            # 720 degrees over 10s
+  - { time: 0, type: scale, amount: 0.06, frequency: 2.0, mode: squash }
+  - { time: 0, type: translate, y: 0.10, frequency: 1.0 }
